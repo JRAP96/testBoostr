@@ -128,16 +128,44 @@
 
 
 <!-- Para el MODAL, para hacerlo estático con respecto al fondo del modal agregamos data-bs-backdrop="static" data-bs-keyboard="false" al div que contiene el modal. Vienen Tooltips y Popover-->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg modal-fullscreen-lg-down">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modal Titulo</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Asistente Interactivo</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <b>Aquí va el color que usted quiera</b> 
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, quis ex consequatur commodi maxime omnis numquam debitis amet delectus nobis sint pariatur eum rem praesentium error odio et. Voluptates harum, ab molestiae tempore corrupti, eligendi quia optio ea fugiat sit reiciendis, repellendus tenetur! Aliquam hic voluptas mollitia laborum neque dolorum iure, ratione pariatur expedita illo, asperiores quas corporis voluptates delectus voluptate repudiandae culpa error facilis exercitationem nesciunt molestiae recusandae. Facilis vitae sequi explicabo commodi est corporis maiores beatae tempore ad. Doloremque facilis quam cum ipsum sequi atque id pariatur, possimus enim dolorum iure expedita reprehenderit, sunt quidem distinctio porro veritatis.
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col text-center">
+                  <a class="btn btn-lg btn-outline-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Llamando canvas desde link
+                  </a>
+                  </div>
+                  <!-- Se hace con un boton y un data-bs-target, en ambos casos se utiliza el toggle collapse, se recomienda -->
+                  <div class="col text-center">
+                  <button class="btn btn-lg btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Llamando canvas desde boton
+                  </button>
+                  </div>
+                </div>
+                  <!-- Para el contenido del collapse -->
+                <div class="collapse" id="collapseExample">
+                    <div class="row text-center">
+                    <h3 class="text-center text-success">Esto corresponde al canvas anidado</h3>
+                    <div class="col-9">
+                    <canvas id="lienzo2" height="500px" width="500px">No es posible mostrar el canvas</canvas>
+                    </div>
+                    <div class="col-3">
+                      <button type="button" class="btn btn-outline-info" id="Dibujar2">--??--</button>
+                      <button type="button" class="btn btn-outline-info" id="Dibujar3">--??--</button>
+                      <button type="button" class="btn btn-outline-info" id="Dibujar4">--??--</button>
+                      <button type="button" class="btn btn-outline-info" id="Borrar2">Borrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <!-- Para agregar Tooltips -->
             <p><a href="#" class="tooltip-test" title="Hola soy un tooltip">This link</a> and <a href="#" class="tooltip-test" title="Soy otro Tooltip">that link</a> have tooltips on hover.</p>
             <!-- Para agregar Popover -->
@@ -179,36 +207,7 @@
 
 <!-- Para el collapse con un canvas -->
 <!-- Se hace el collapse con un ancla y un role de boton pero no se recomienda, aqui se utiliza href, se recomienda utilizar el boton -->
-<div class="container">
-  <div class="row">
-    <div class="col text-center">
-    <a class="btn btn-lg btn-outline-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-      Llamando canvas desde link
-    </a>
-    </div>
-    <!-- Se hace con un boton y un data-bs-target, en ambos casos se utiliza el toggle collapse, se recomienda -->
-    <div class="col text-center">
-    <button class="btn btn-lg btn-outline-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Llamando canvas desde boton
-    </button>
-    </div>
-  </div>
-    <!-- Para el contenido del collapse -->
-  <div class="collapse" id="collapseExample">
-      <div class="row text-center">
-      <h3 class="text-center text-success">Esto corresponde al canvas anidado</h3>
-      <div class="col-9">
-      <canvas id="lienzo2" height="500px" width="800px">No es posible mostrar el canvas</canvas>
-      </div>
-      <div class="col-3">
-        <button type="button" class="btn btn-outline-info" id="Dibujar2">--??--</button>
-        <button type="button" class="btn btn-outline-info" id="Dibujar3">--??--</button>
-        <button type="button" class="btn btn-outline-info" id="Dibujar4">--??--</button>
-        <button type="button" class="btn btn-outline-info" id="Borrar2">Borrar</button>
-      </div>
-    </div>
-  </div>
-</div>
+
 
 
 <!-- Para las list-Group -->
