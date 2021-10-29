@@ -1,0 +1,33 @@
+*{
+    padding: 5px;
+    border: 5px;
+}
+
+body{
+    background-color: lightcyan;
+}
+#lienzo{
+    border: solid 2px blue;
+    background-color: rgba(200, 238, 238, 0.3);
+}
+#lienzo2{
+    border: solid 2px rgba(217, 255, 0, 0.3);
+    background-color: rgba(68, 224, 81, 0.3);
+}
+#lienzo:hover{
+    background-color: rgba(128, 179, 226, 0.3);
+}
+#lienzo2:hover{
+    background-color: rgba(150, 223, 233, 0.3);
+}
+#Dibujar{
+    margin-left: 5px;
+}
+/* Son requisitos de los NavBar con ScrollSpy para que funcionen */
+body{
+    overflow: scroll;
+    position: relative;
+}
+
+/* Este codigo cambia el color del fondo del carrusel */
+/*#carouselExampleControls{  background-color: rgba(0, 137, 200, 0.1); }*/
